@@ -15,16 +15,16 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Fri Apr 26 08:45:53 2024"
+// CREATED		"Fri Apr 26 09:00:19 2024"
 
 module ORI(
 	Op,
-	addi_output
+	Y
 );
 
 
 input wire	[31:26] Op;
-output wire	addi_output;
+output wire	Y;
 
 wire	NOTOp27;
 wire	NOTOp30;
@@ -33,7 +33,7 @@ wire	NOTOp31;
 
 
 
-assign	addi_output = Op[29] & NOTOp31 & NOTOp30 & Op[28] & NOTOp27 & Op[26];
+assign	Y = Op[29] & NOTOp31 & NOTOp30 & Op[28] & NOTOp27 & Op[26];
 
 assign	NOTOp31 =  ~Op[31];
 

@@ -15,16 +15,16 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Wed Aug 17 11:53:33 2022"
+// CREATED		"Fri Apr 26 08:59:29 2024"
 
 module SLTI(
 	Op,
-	slti_output
+	Y
 );
 
 
 input wire	[31:26] Op;
-output wire	slti_output;
+output wire	Y;
 
 wire	NOTOp26;
 wire	NOTOp28;
@@ -34,7 +34,7 @@ wire	NOTOp31;
 
 
 
-assign	slti_output = Op[29] & NOTOp31 & NOTOp30 & NOTOp28 & Op[27] & NOTOp26;
+assign	Y = Op[29] & NOTOp31 & NOTOp30 & NOTOp28 & Op[27] & NOTOp26;
 
 assign	NOTOp31 =  ~Op[31];
 
